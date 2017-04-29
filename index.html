@@ -512,6 +512,13 @@ background-image: url(photos/projects/IMG_0830.JPG)
      highlightStyle: "magula",
      highlightLines: false
    })
+  document.onkeydown = function(e){
+    if (e.which == 65 || e.keyCode == 65){
+      setInterval(function(){
+      	if (slideshow.getCurrentSlideIndex()+1 == slideshow.getSlideCount())
+      		{slideshow.gotoFirstSlide();} else {slideshow.gotoNextSlide();}},5600);
+    }
+};
 </script>
 </body>
 </html>
